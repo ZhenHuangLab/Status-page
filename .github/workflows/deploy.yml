@@ -31,7 +31,11 @@ jobs:
               
               
               - name: remove old docs
-                run: rm -rf docs/*
+                run: rm -rf ./docs
+
+              - name: mkdir docs
+                run: mkdir ./docs
+
             # 推送到docs文件夹
               - name: Deploy
                 uses: peaceiris/actions-gh-pages@v3
