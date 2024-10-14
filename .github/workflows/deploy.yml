@@ -29,9 +29,9 @@ jobs:
               - name: Checkout your repository using git
                 uses: actions/checkout@v4
               
-              # 部署到GitHub Pages
+              # 部署到GitHub Pages，将dist目录下的文件推送到gh-pages分支
               - name: Deploy
                 uses: peaceiris/actions-gh-pages@v3
                 with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./dist
+                  publish_branch: gh-pages
