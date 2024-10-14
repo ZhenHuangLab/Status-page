@@ -16,6 +16,12 @@ jobs:
         steps:
             - name: Checkout your repository using git
               uses: actions/checkout@v4
+
+            - name: remove old docs
+              run: rm -rf ./docs
+
+            - name: mkdir docs
+              run: mkdir ./docs
             - name: Install pnpm
               run: npm install pnpm -g
             - name: Install dependencies
@@ -28,13 +34,6 @@ jobs:
             steps:
               - name: Checkout your repository using git
                 uses: actions/checkout@v4
-              
-              
-              - name: remove old docs
-                run: rm -rf ./docs
-
-              - name: mkdir docs
-                run: mkdir ./docs
 
             # 推送到docs文件夹
               - name: Deploy
