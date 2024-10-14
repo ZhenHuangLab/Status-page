@@ -16,12 +16,6 @@ jobs:
         steps:
             - name: Checkout your repository using git
               uses: actions/checkout@v4
-
-            - name: remove old docs
-              run: rm -rf ./docs
-
-            - name: mkdir docs
-              run: mkdir ./docs
             - name: Install pnpm
               run: npm install pnpm -g
             - name: Install dependencies
@@ -34,7 +28,8 @@ jobs:
             steps:
               - name: Checkout your repository using git
                 uses: actions/checkout@v4
-
+              - name: cpoy CNAME
+                run: cp CNAME ./dist/
             # 推送到docs文件夹
               - name: Deploy
                 uses: peaceiris/actions-gh-pages@v3
