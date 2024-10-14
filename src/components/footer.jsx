@@ -32,22 +32,6 @@ const Footer = () => {
             </React.Fragment>
           ) : null}
         </p>
-        <p>
-          基于&nbsp;
-          <CustomLink to="https://uptimerobot.com/" text="UptimeRobot" />
-          &nbsp;接口&nbsp;|&nbsp;检测频率 5 分钟
-        </p>
-        <p>Built with&nbsp;
-          <CustomLink
-            text={Package.alia}
-            to="https://github.com/imsyy/site-status"
-          />
-          &nbsp;Version&nbsp;{Package.version} by&nbsp;
-          <CustomLink
-            text='IMSYY'
-            to="https://github.com/imsyy"
-          />
-        </p>
       </div>
     </footer>
   );
